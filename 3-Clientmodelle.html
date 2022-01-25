@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Schwerpunkt 1: Eingesetzte Hardware und Verkabelung im Netzwerk">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Eingesetzte Hardware und Verkabelung im Netzwerk</title>
+  <link rel="icon" href="icon.png" type="image/icon.png">
+</head>
+<body>
+
+<header>
+	<nav id="navigation">
+  	<ul>
+    	<li><a href="index.html">Home</a></li>
+    	<li><a href="1-Hardware.html">Hardware</a></li>
+    	<li><a href="2-Netzwerkgeräte.html">Netzwerkgeräte</a></li>
+		<li><a aria-current="page">Clientmodelle</a></li>
+    	<li><a href="4-Verkabelung.html">Verkabelung</a></li>
+		<li><a href="5-Übertragungsmedien.html">Übertragungsmedien</a></li>
+		<li><a href="6-Verkabelungsstrategien.html">Verkabelungsstrategien</a></li>
+		<li><a href="7-Aktuelle-Standarts.html">Aktuelle Standarts</a></li>
+    	<li><a href="8-Kontakt.html">Kontakt</a></li>
+  	</ul>
+	</nav>  
+	
+    <a id="logo" tabindex="-1" title="zurück zur Startseite" href="index.html">
+		<h1>Die Clientmodelle</h1> 
+        <p>Detaillierte Beschreibung</p>
+    </a>   
+</header>
+    
+
+<main>
+<article><br>  
+
+    <h1>Client-Server-Modell:</h1>
+    <img class="rechts" src="clientservermodell.jpg" alt="Client-Server-Modell">
+ 		<p>
+            •	Kommt für die Bereitstellung, Server-Diensten zum Einsatz<br>
+            •	Datenaustausch zwischen Client und Server über Protokolle ermöglicht<br>
+            •	Sorgt --> Aufgaben und Dienstlistungen auf verschiedene Rechner verteilt werden können<br>
+            •	Sind dauerhaft in Bereitschaft --> Zugriff der Clients jederzeit auf den Server<br>
+            •	Existieren weitere Konzepte --> Peer-to-Peer/ Master-Slave<br>           
+	</p><br> 
+
+
+	<h2>Peer-to-Peer-Modell:</h2>
+    	<p>
+			•	Konzept zur Bereitstellung von Services<br>
+            •	Untereinander gleichberechtigt<br>
+            •	Können Server bereitstellen/ in Anspruch nehmen<br>
+
+	</p><br> 
+
+
+	<h2>Master-Slave-Modell:</h2>
+        <p>
+			•	Konzept zur Regelung der Anwendungen oder Prozesse<br>
+            •	Übernimmt Steuerfunktionen/ erteilt ein/ mehrere Slaves das Recht 
+                    --> kommunizieren/ Ressourcen zu nutzen<br>
+
+	</p><br>     
+
+
+	<h2>Typische Client/Server- Anwendungen und Protokolle::</h2>
+	<p>
+        •	IT-Anwender basieren auf dem C.-S.-Modell<br>
+        •	Nutzen bestimmte Anwendungen oder Daten
+                --> zur Verfügung gestellt von Anwendung-/Datenbankservern<br>
+        •	Viele Anwendungen nutzen das C.-S.-Modell<br>
+        •	Bekannteste --> World Wide Web<br>
+        •	Clients fragen Inhalte bestimmter Internetseiten an<br>
+        •	Kommunikation per http, HTTPS<br>
+        •	Webbrowser stellt HTTP, HTTPS Anfragen an Webserver
+                --> erreichbar über IP-Adresse<br>
+        •	Server nimmt Anfrage entgegen, verarbeitet und liefert<br>
+        •	Im Webbrowser werden HTTP, HTTPS-Antworten verarbeitet, dem Anwender dargestellt<br>
+        
+	</p><br>     
+	
+
+
+	<h2>Vor- und Nachteile des Client-Server-Modells:</h2>
+
+	<h3>Vorteile:</h3>
+	<p>
+        •	Zentrale Verwaltung der Services/ Ressourcen<br> 
+        •	Sicheres zentrales Management der Zugriffsrechte<br> 
+        •	kann viele Clients bedienen<br>
+        •	lassen sich per Netzwerke bereitstellen<br>
+    </p>    
+    
+	<h3>Nachteile:</h3>
+	<p>
+        •	Ausfall sorgt --> Dienstausfall- für kritische Dienste/ müssen Redundanzen bereitgestellt werden<br>
+        •	müssen mit genügend Bandbreite und Ressourcen ausgestattet sein<br>
+        •	Ressourcenengpässe verlangsamen die Antwort<br> 
+        •	Betriebe und Bereitstellung ist mit erhöhtem Aufwand verbunden/ erfordert spezifisches Know-how<br>
+	</p><br>   
+   
+
+
+
+    <h2>Typische Merkmale des Client-Server-Modells:</h2>
+	<p>
+        •	Verteilung unterschiedlicher Aufgaben auf Client und Server<br>
+        •	Server stellen Dienste bereit<br>
+        •	Clients fragen Dienste bei Servern an<br>
+        •	Regelung der Kommunikation/ Informationsaustausches zwischen Client und Server<br> 
+        •	bedienen ein oder mehrere Clients<br>
+        •	Server- und Clientfunktionen oder -aufgaben sind nicht an eine physische Hardware gebunden<br>
+        •	Physische Rechner können Client-/ Serveraufgaben ausführen<br>
+        •	Initiative zur Interaktion geht immer vom Client aus<br>
+    </p><br>   
+    
+    
+    
+    <h2>Fat Client:</h2>
+    <img class="rechts" src="fatclient.jpg" alt="Fat Client">
+	<p>
+        •	Ein voll ausgestatteter, leistungsfähiger Desktop Computer<br>
+        •	Über ausreichend Rechenkapazität, Diskette/ CD-ROM-Laufwerk<br>
+        •	Plattenspeicher, leistungsstarke Grafikkarten verfügt<br>
+        •	Datenverarbeitung lokal auf dem Client 
+                --> eigene Festplatte, Laufwerk/ Programmierschnittstellen, der Hardware besteht<br>
+        •	Beispiel --> Windows-basierter PC<br>
+    </p><br>  
+    
+    
+    <h2>Thin Client:</h2>
+	<p>
+        •	Computer/ Programm --> benötigt weniger Hardware und Rechenleistung<br>
+        •	Angewiesen auf den Server<br>
+        •	Betriebssystem und Programm-Updates werden vom Server bereitgestellt<br>
+        •	Wartungskosten, Rechenleistung und Energie kann gespart werden<br>
+        •	Beispiel --> Windows-Terminals, Netzwerkcomputer, NetPCs<br>
+        •	Viele nur in der Lage Daten herauszulesen/ Benutzereingaben an Server weiterzuleiten<br>
+        
+	</p><br>   
+
+</article>
+
+<aside class="contact">
+    <h2>Links</h2>
+	<ul>
+		<li><a href="" >Hardware Video</a></li>
+		<li><a href="https://www.youtube.com/watch?v=Z7isAafDU2Q" >Netzwerkgeräte Video</a></li>
+		<li><a href="https://www.youtube.com/watch?v=6vQBEIq7YE8" >Verkabelung Video 1</a></li>
+		<li><a href="https://www.youtube.com/watch?v=ayiAKr5OEQA" >Verkabelung Video 2</a></li>
+		<li><a href="https://www.youtube.com/watch?v=WiJRFGwHwVg&list=PLrmS7cNG9z81j92MAqjsO4eCZnSpYXDG_" >Übertragungsmedien Video</a></li>
+		<li><a href="https://www.youtube.com/watch?v=XQNw4iyphvI" >Verkabelungsstrategien Video</a></li>
+		<li><a href="1-unterseite.html" >Aktuelle Standarts Video</a></li>
+	</ul>
+</aside>
+</main>   
+
+
+<footer>
+	<section class="textcon">
+    	<h2>Kontaktieren Sie unseren Kundenservice</h2>
+        <address>
+      	<dl class="grid">
+		 	<dt>E-mail:</dt><dd><a href="mailto: testmail@gmail.com" >testmail@gmail.com</a></dd>
+      		<dt>Telefon:</dt><dd><a href="tel:+49-176 34954188">017634954188</a></dd>
+      		<dt>Adresse:</dt><dd> Westerburg</dd>
+    	</dl>
+    	</address>
+	</section>
+    
+
+    <p class="copy">
+    	Copyright © 2020 
+	</p>
+
+</footer>  
+
+</body>
+</html>

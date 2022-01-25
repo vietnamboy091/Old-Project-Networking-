@@ -1,0 +1,337 @@
+/* Stylesheet für Schwerpunkt 1
+  responsives Layout mit Grid Layout ab Z. 249   */
+
+/* ====================================================   GLOBAL DEFINITION   ==================================================== */
+
+/* alternatives Boxmodell */
+html { 
+  	box-sizing: border-box; 
+	padding: 0;
+	margin: 0;	
+} 
+
+*, ::before, ::after { 
+	box-sizing: inherit; 
+}
+
+body {
+    margin: 0 auto; 
+    font: normal 1em Arial, sans-serif;  /* Mindestschriftgröße wird dem Browser, bzw. dem Nutzer überlassen! */
+	color: white;
+	background:
+		radial-gradient(black 15%, transparent 16%) 0 0,
+		radial-gradient(black 15%, transparent 16%) 8px 8px,
+		radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+		radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+	background-color:#282828;
+	background-size:16px 16px;
+}
+
+/* ====================================================   Inhalt   ==================================================== */
+
+
+a {
+  color: skyblue;
+}
+
+a:hover,
+a:focus {
+	background:#e6f2f7 ;
+}
+
+header {
+  max-width: 80em;
+  color:white;
+  background: #eee;
+  margin: 0 auto 1.6em;
+  position: relative;
+}
+
+header::after {
+  position: absolute;
+  content: "";
+  background: linear-gradient(to top, #feb040 25%, #282523 25%, #282523 50%, #34a2da 50%, #34a2da 75%, #0e76bc 75%);
+  height: 1.6em;
+  left: 0;
+  right: 0;
+  bottom: -1.6em;
+}
+
+header h1 {
+  padding: 0;
+}
+
+header #logo {
+  display: inline-block;
+  background: url('../img/Design08-our-services.png') no-repeat left center;
+  color: black;
+  margin: 0 0 0 2em;
+  padding-left: 10em;
+  text-decoration: none;
+}
+
+main {
+  display: block;   /*für IE9-11 */	
+  max-width: 70em;
+  position:relative;
+  padding:0 20px 0;
+  margin: 0 auto;
+  background: white;
+  color: #333;
+}
+
+.gallery{
+  color: #FFFFFF;
+  font-family: "Times New Roman", Times, serif;
+}
+
+  /* slide in captions found @http://css-tricks.com/slide-in-image-captions/ */
+figure { 
+  padding:0; 
+  margin:0 -20px;;
+  display: block; 
+  position: relative; 
+  overflow: hidden; 
+}
+
+figure:before { 
+  content: "?"; 
+  position: absolute; 
+  background: rgba(255,255,255,0.75); 
+  color: black;
+  width: 24px;
+  height: 24px;
+  bottom:30px; left:30px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  transition: all 0.6s ease;
+  opacity: 0.75;  
+}
+figure:hover:before {
+  opacity: 0;
+}
+
+.gallery img {
+	width: 100%;
+}
+
+figcaption { 
+  position: absolute; 
+  background: rgba(0,0,0,0.75); 
+  color: white; 
+  padding: 10px 20px;
+  width:100%; 
+  opacity: 0;
+  bottom: -20%; 
+  left: 0;
+  transition: all 0.6s ease;
+}
+
+figcaption h2 {
+  margin: 0 12px;
+}
+
+figcaption p {
+  margin: 12px 12px 0;
+  padding: 0;
+}
+figure:hover figcaption {
+  opacity: 1;
+  bottom: 0;
+}
+
+
+article{
+  background: #fff;
+  padding: 30px;
+  width: 100%;
+}
+
+
+section.services h1{
+  padding-left:30px;
+  background: url('../img/Design08-our-services.png') no-repeat left center;
+}
+
+section.services p{
+  border-bottom: 1px dashed #535353;
+}
+
+/* Sign in form */
+
+#signin label {
+	display: block;
+}  
+
+#signin input, #signin textarea {   
+   width: 80%;
+   border: 1px solid #dfdfdf;
+   background: #fff;
+   padding: 5px 3px;
+}   
+
+#signin textarea{
+   height:105px;
+   overflow:auto;
+}      
+
+#signin button{
+   margin: 1em 1em;
+   padding: 0.5em;
+   float: right;
+   color: #feb040;
+   background: #0e76bc;
+   border: 1px solid #333;
+   border-radius: 5px;
+}
+   
+#signin button:hover,
+#signin button:focus {
+	background: #feb040;
+	color: #0e76bc;
+}
+
+.services img {
+	width: 100%;
+	filter: invert(1);  
+}
+
+  /* Navigation */
+
+nav {
+	margin: 0;	
+	width: 100%;
+	background: black;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+ 	font: 1.3em  Arial, Helvetica, sans-serif;
+ 	list-style-type: none;
+}
+
+nav li {
+	display: inline;
+	margin: 0;
+}
+
+nav a {
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	padding: .5em;
+	padding-right: 2em;
+	text-align: right;
+}
+
+[aria-current=page] {
+	font-weight: bold;
+	color: #feb040;
+}
+
+nav a::after{
+	content:" ▶";
+	color: #feb040;
+	display: inline-block;
+	width: 2em;
+}
+
+nav a:hover::after, nav a:focus::after{
+	content:" ▼";
+}  
+
+nav a:hover, nav a:focus {
+	background: transparent;
+	color: #feb040;
+}
+
+
+footer {
+  max-width: 70em;
+  padding: 1em;
+  margin: 1em auto;
+  color: #ccc;
+}
+
+dl.grid { 
+  display: grid; 
+  grid-template-columns: 1fr 100%; 
+}
+dd { 
+  margin: 0; 
+  padding-left: 1em; 
+}
+dl.grid dd {
+  margin-bottom: 1em;
+}
+
+a[href^="tel"] { white-space: nowrap; }
+
+.copy {
+	text-align: right;
+}
+
+/* ====================================================   LAYOUT   ==================================================== */
+
+/* Mobile first ! alle Blöcke haben 100%, Navigation unten*/
+
+body {
+  padding: 0 1em;
+}
+
+.rechts{
+float: right;
+margin-left: 10px;
+width: 234px;
+height: 60px;
+}
+
+@media screen and (min-width: 35em) {    
+
+	main, footer {
+	  	display: grid;
+	  	grid-template-columns: repeat(2, 1fr);
+	  	grid-gap: 1em;
+	}
+	article {
+		grid-column: 1 / 2;
+	}	
+	.gallery {
+		grid-column: 1 / 3;
+	}	
+	
+	aside  {
+		grid-column: 2 / 3;	
+	}
+}
+
+@media screen and (min-width: 50em) {   
+	main, footer {
+	  	grid-template-columns: repeat(3, 1fr);		/* 3Spalten, sobald Platz da ist */
+	}
+	
+	article {
+		grid-column: 1 / 3;
+	}
+	
+	.gallery {
+		grid-column: 1 / 4;
+	}
+	
+	aside  {
+		grid-column: 3 / 4;	
+	}
+	figure {
+  		margin: 0;
+	}
+
+
+nav ul {
+  padding: 0 0 0 2%;
+  font: 1.2em Arial,Helvetica,sans-serif;
+}
+}
